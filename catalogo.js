@@ -11,7 +11,7 @@ fetch("./productos.json")
     //se mandan a llaamr elementos del DOM
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const tituloPrincipal = document.querySelector("#titulo-principal");
-let botonesAgregar = document.querySelectorAll("#agregar-carrito");
+let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito = document.querySelector("#numerito");
 function cargarProductos(productosElegidos) {
 
@@ -23,11 +23,12 @@ productosElegidos.forEach(producto => {
     div.classList.add("producto");
     //const { id, name, artist, description, tecnica, materiales, ancho, altura, profundidad, price, images } = producto;
     // return `
+    // <div class="product-card__btn cart" data-tooltip="agregar al carrito"><span class="material-symbols-rounded"> shopping_bag </span></div>
+    // <div class="product-card__btn fav" data-tooltip="me gusta"><span class="material-symbols-rounded"> favorite </span></div>
     div.innerHTML = `
         <div class="product-card" data-product-id="${producto.id}">
             <div class="product-card__container">
-                <div class="product-card__btn cart" id="agregar-carrito" data-tooltip="agregar al carrito"><span class="material-symbols-rounded"> shopping_bag </span></div>
-                <div class="product-card__btn fav" data-tooltip="me gusta"><span class="material-symbols-rounded"> favorite </span></div>
+                
                 <div class="product-card__img">
                     <img src="${producto.images}" alt="${producto.name}" />
                 </div>
@@ -42,6 +43,7 @@ productosElegidos.forEach(producto => {
 				<div class="product-card__text">${producto.altura}</div>
 				<div class="product-card__text">${producto.profundidad}</div>
                 <div class="product-card__price">${producto.price}</div>
+                <button class="producto-agregar" id="${producto.id}">Agregar</button>
             </div>
         </div>
     `;
@@ -54,14 +56,22 @@ productosElegidos.forEach(producto => {
 }
 
 function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll("#agregar-carrito");
+    botonesAgregar = document.querySelectorAll(".producto-agregar");
 
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     });
 }
 
-botonesAgregar.addEventListenners("click", function(){ console.log("agregado")});    
+// function actualizarBotonesAgregar() {
+//     document.querySelectorAll(".producto-agregar").forEach(boton => {
+//         boton.addEventListener("click", function() {
+//             const productoId = this.closest('.product-card').dataset.productId;
+//             const producto = productos.find(p => p.id == productoId);
+//             console.log(producto);
+//         });
+//     });
+// }
 
 let productosEnCarrito;
 

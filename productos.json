@@ -23,7 +23,7 @@
         "altura": "Altura: 173 cm",
         "profundidad": "",
         "price": "$5,600MXN",
-        "images": "../assets/dos-fridas.jpeg"
+        "images": "./assets/dos-fridas.jpeg"
     },
     {
         "id": 3,
@@ -36,7 +36,7 @@
         "altura": "Altura: 48 cm",
         "profundidad": "",
         "price": "$3,200MXN",
-        "images": "../assets/mujer-psicoanalista.jpeg"
+        "images": "./assets/mujer-psicoanalista.jpeg"
     },
     {
         "id": 4,
@@ -49,7 +49,7 @@
         "altura": "Altura: 73 cm",
         "profundidad": "",
         "price": "$4,500MXN",
-        "images": "../assets/arbol-vida.jpeg"
+        "images": "./assets/arbol-vida.jpeg"
     },
     {
         "id": 5,
@@ -75,7 +75,7 @@
         "altura": "Altura: 37.8 cm",
         "profundidad": "",
         "price": "$2,900MXN",
-        "images": "../assets/ola.jpeg"
+        "images": "./assets/ola.jpeg"
     },
     {
         "id": 7,
@@ -88,7 +88,7 @@
         "altura": "Altura: 278.5 cm",
         "profundidad": "",
         "price": "$4,000MXN",
-        "images": "../assets/nacimiento-venus.jpeg"
+        "images": "./assets/nacimiento-venus.jpeg"
     },
     {
         "id": 8,
@@ -114,7 +114,7 @@
         "altura": "Altura: 90 cm",
         "profundidad": "",
         "price": "$5,000MXN",
-        "images": "../assets/vestidos.jpeg"
+        "images": "./assets/vestidos.jpeg"
     },
     {
         "id": 10,
@@ -127,7 +127,7 @@
         "altura": "Altura: 30 cm",
         "profundidad": "",
         "price": "$1,000MXN",
-        "images": "../assets/theatrical-composition.jpeg"
+        "images": "./assets/theatrical-composition.jpeg"
     }
 
 ]

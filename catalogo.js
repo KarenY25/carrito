@@ -8,6 +8,27 @@ fetch("./productos.json")
         cargarProductos(productos);
     })
 
+// Hacer la solicitud fetch
+// fetch("./productos.json")
+//     .then(response => {
+//         // Verificar si la respuesta es exitosa
+//         if (!response.ok) {
+//             throw new Error("Network response was not ok");
+//         }
+//         // Convertir la respuesta a JSON
+//         return response.json();
+//     })
+//     .then(data => {
+//         // Asignar los datos a la variable productos
+//         productos = data;
+//         // Llamar a la función cargarProductos con los datos obtenidos
+//         cargarProductos(productos);
+//     })
+//     .catch(error => {
+//         // Manejar cualquier error que ocurra durante el fetch
+//         console.error("Hubo un problema con la solicitud Fetch:", error);
+//     }); 
+
     //se mandan a llaamr elementos del DOM
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const tituloPrincipal = document.querySelector("#titulo-principal");
@@ -63,16 +84,6 @@ function actualizarBotonesAgregar() {
     });
 }
 
-// function actualizarBotonesAgregar() {
-//     document.querySelectorAll(".producto-agregar").forEach(boton => {
-//         boton.addEventListener("click", function() {
-//             const productoId = this.closest('.product-card').dataset.productId;
-//             const producto = productos.find(p => p.id == productoId);
-//             console.log(producto);
-//         });
-//     });
-// }
-
 let productosEnCarrito;
 
 let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
@@ -126,6 +137,18 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+// function actualizarNumeroCarrito() {
+//     const productosEnCarrito = localStorage.getItem("productosEnCarrito");
+// const contenedorNumCarrito = document.querySelector("#numerito");
+//     //const productosEnCarrito = localStorage.getItem("productosEnCarrito") || [];
+//     //const totalProductos = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
+//     /*if(productosEnCarrito==null){contenedorNumCarrito.innerHTML = ""}
+//     else{contenedorNumCarrito.innerHTML = "1"}*/
+//     contenedorNumCarrito.innerHTML = productosEnCarrito;
+// }
+// window.addEventListener('storage', actualizarNumeroCarrito);
+
+// actualizarNumeroCarrito();
 
 
 

@@ -93,9 +93,9 @@ function eliminarDelCarrito(e) {
       }).showToast();
 
     const idBoton = e.currentTarget.id;
-    const index = productosEnCarrito.findIndex(producto => producto.eliminar === idBoton);
+    const catalogo = productosEnCarrito.findCatalogo(producto => producto.eliminar === idBoton);
     
-    productosEnCarrito.splice(index, 1);
+    productosEnCarrito.splice(catalogo, 1);
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
